@@ -1,0 +1,122 @@
+import { createHash, timingSafeEqual } from 'node:crypto';
+
+// This is a single-file Railway Function. The manifest is tied to the deployed dist/ bytes.
+export const MANIFEST = {"app.js":{"size":45024,"sha256":"500586d4e51abf6b4c6b6e3393466b68648ec06a67e1214ee202d52389e78fb7","type":"text/javascript; charset=utf-8"},"ar-viewer.css":{"size":4497,"sha256":"350ccfe76a527c66b1e7424652b65b65a430cc10af8dca17374351208a5f391b","type":"text/css; charset=utf-8"},"ar-viewer.js":{"size":22268,"sha256":"bbafb80f0a9c193f02e229379d5e652d1a6b42011bd7687aedb570714ad11d0e","type":"text/javascript; charset=utf-8"},"assets/aquifer-systems.jpg":{"size":74859,"sha256":"8949a49276f3233bd05ff64b671b6102dfd1af73cdc3059a753236d154aa9913","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/conceptual-section.jpg":{"size":74842,"sha256":"ad49db826e52578d8672c3ebf92c4cfab9361fdcbf6ab0eb4a8c9f33c5c49a3b","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/gadakwadi.json":{"size":245185,"sha256":"a9371b9c32b7b691e2b3422c8d08ec717dd1de931eb42152b350ce578f309bd9","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/geological-section.jpg":{"size":59878,"sha256":"049d5b406d42cc49ccffc1281ff03e52ec162eb6da43a88310de9bba28ffcd7b","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/pune-watersheds-figure.jpg":{"size":123285,"sha256":"4a2879a479df876ff6822b7bfd7f3127bc22cf8b4f473cd88595fe2ca3f9242c","type":"image/jpeg"},"assets/regions/andhra-pradesh/satellite.jpg":{"size":115183,"sha256":"b5fbfe24ce1987808159cca9c342f026574089e6d8fd6598ee33331098c2dc5f","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/andhra-pradesh/terrain.json":{"size":46286,"sha256":"08fa09dc7bcd50da289b7c7d781c34de8bca491b8bfdaed5c0b172950ab12c58","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/arunachal-pradesh/satellite.jpg":{"size":180911,"sha256":"067a72251eee9156532ac71a17ab89e4a00176b565617946129ccfcb3b0fa555","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/arunachal-pradesh/terrain.json":{"size":52845,"sha256":"1516729df683bca9799592fc64217589c4761b3590b95b10d767207f6d686bec","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/assam/satellite.jpg":{"size":135655,"sha256":"62de8ae4bc5bc21c052bd6c1fb3f417ec633976f59c1826dbcfadb197f175441","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/assam/terrain.json":{"size":39723,"sha256":"9977627f9c7e125bfab1ff952cce6536490f7d9a6a95fa31b1dc17e4a3c5f535","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/bihar/satellite.jpg":{"size":133212,"sha256":"838188e79c075c3ca1257e3459684881321203ef5eaa5a165ebcb7c414adab5e","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/bihar/terrain.json":{"size":46284,"sha256":"4398a68bafaea30cc42551f7ef94fb2853ebfd68ff7f097630409fe78a498639","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/chhattisgarh/satellite.jpg":{"size":155982,"sha256":"bc4726ff19c49a59dc88fe6740aa634f40238f9d2017120089b589d8ee6faa33","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/chhattisgarh/terrain.json":{"size":46284,"sha256":"4899220a1150fc92fc67704cba81a15815179583e5c89a7cb4abf235c9f4df16","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/goa/satellite.jpg":{"size":130292,"sha256":"349ffbcf8a740ae2f1b63fd55460ef2fc61367a5f28a657adf5ce1cced22d048","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/goa/terrain.json":{"size":39528,"sha256":"5b10625eb96d241168dc6e0ba6af1b39045df67685aed04dfdbcb668f65cb745","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/gujarat/satellite.jpg":{"size":109969,"sha256":"e7cdf20af72f57a2b11a0ff8b63436092561b0620880efd88608ea4c147864c9","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/gujarat/terrain.json":{"size":34264,"sha256":"1244459d48d4afc6e825d85d7337ccf7a0e5f7a8273bc0abcb2e08c21f39420b","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/haryana/satellite.jpg":{"size":136508,"sha256":"6587ab912ddd7dd668bb2b9ffdd9b4d5e8668f6b0d64ce45f0424b0e5db07cc4","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/haryana/terrain.json":{"size":46284,"sha256":"274d671eea68f839a8c43cb48343b50b6a7ac45aea20ef943159089b72528732","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/himachal-pradesh/satellite.jpg":{"size":159528,"sha256":"2161d68d73a1ce2aed2754a6223863e426852af12da4372a8c9e9a24c861ac13","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/himachal-pradesh/terrain.json":{"size":52845,"sha256":"78d061b5a6a60fb8d7954fc69712c6eb049080b153e1bac8cbfc701d1e9a1420","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/jharkhand/satellite.jpg":{"size":167088,"sha256":"b6008181106f2832686d79b134469b86417921676086d701253fca681b8ed05e","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/jharkhand/terrain.json":{"size":50178,"sha256":"432a01670d882d22f67adddb513accdb1e64cafe87d5310a1f381258d5677db5","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/karnataka/satellite.jpg":{"size":158454,"sha256":"bb0b2ae619695fd77a2cfc0725bc2ec7c794f891dcc5651facc188184214088c","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/karnataka/terrain.json":{"size":46284,"sha256":"ef871c272ae60d4517a43adf3bb3a90cdb11fd4841df475d782eb63bfb8815ec","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/kerala/satellite.jpg":{"size":103370,"sha256":"27b99df045fad0b8293fbc5e94628213fe59d4377dc5a4ee86d99f881f5bc521","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/kerala/terrain.json":{"size":34830,"sha256":"1587071f7144609bb57315d19dd61f0924a57658d4863587e6de24c839fd22c0","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/madhya-pradesh/satellite.jpg":{"size":131025,"sha256":"4650a0f53fcc41cd605ac5359ec7464d6a8d984038313053e7c43efb487a0940","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/madhya-pradesh/terrain.json":{"size":47303,"sha256":"f22574e59c1e5dddd4739df80b899e42a3a8ec470d3ea6c947436e7329548ccf","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/manipur/satellite.jpg":{"size":136019,"sha256":"bec86ed98e078669898115b94aedb13d990ec35e1c1edf96f101485faa1ef696","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/manipur/terrain.json":{"size":47172,"sha256":"c4fd5ffd6ebe44206815d0ae791a8be7d46c392f9cf7aff061ec90e11737e3d9","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/meghalaya/satellite.jpg":{"size":112216,"sha256":"5b94d56591bbe814ea3225a310707c1db243b904187a6e713b01946111201338","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/meghalaya/terrain.json":{"size":45349,"sha256":"5ee539d3101c473372eab6a0f6b54ef8cff512ad86ac35e16e9a6f88ac457227","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/mizoram/satellite.jpg":{"size":165538,"sha256":"0a6802ebd98a3b67bad96bf1c262c71dd26a02e4c28f5090646a9dbb51e52774","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/mizoram/terrain.json":{"size":48801,"sha256":"f2946c7512532cb7875988826e8a9adf448223aec143cecc8bff27548ddf394e","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/nagaland/satellite.jpg":{"size":110901,"sha256":"86c600ebabd487f9fbe2fdf93319b8e2d62fb0b32bc3cd47030020a89d4e51ff","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/nagaland/terrain.json":{"size":52845,"sha256":"893e549cea983717b3495cea0e79d71783d5c132d9bb20c03c3ec9ca4e659c36","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/odisha/satellite.jpg":{"size":82118,"sha256":"443823fda3655b156e3a5b9681f1b88cb3676ffc2bff750c4a6b7db92f6dfba8","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/odisha/terrain.json":{"size":33638,"sha256":"8908f4d0fb66262aecbe346e96916cc69fed06584ebb48c4a64acef089f2d1d5","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/punjab/satellite.jpg":{"size":156150,"sha256":"834bc5551ff23beff3ebd5f52d4bf18704e9a8327bb62fabd4bafdcbd8ca9e3e","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/punjab/terrain.json":{"size":46284,"sha256":"0a9ea2e9270bbce4870b1b80d5b508c4ee652b2a9ca6800074f6c1311ed79903","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/rajasthan/satellite.jpg":{"size":144057,"sha256":"f843a3762d2dce00e847737959af02e7104a0896e5faeec01fc43902ca741481","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/rajasthan/terrain.json":{"size":46284,"sha256":"b9f2a2a4782738e5da43c7c3d4ae64bbda27a36a837b882e62f2cf2b66863b51","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/sikkim/satellite.jpg":{"size":125587,"sha256":"b572de676adb59f1bd0ef4738a5bbd90a7501eefa17b7784b992183b8ecc9ffc","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/sikkim/terrain.json":{"size":52845,"sha256":"1bb74fd2da49ae9ca68e2dae2b5010ea5a93642e11819e2f987336bb6592664e","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/tamil-nadu/satellite.jpg":{"size":135885,"sha256":"4a2586755dd969cf616a13b9bda3ef0f0b3f12363b1b6a3f2bf6d0d269879742","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/tamil-nadu/terrain.json":{"size":33631,"sha256":"fa0ab4e8c3ec22a04560d10551a98831cc7054051dd252d228cf3ae1a7d28303","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/telangana/satellite.jpg":{"size":144614,"sha256":"1f340bcadb152321158a8a85691e7088c4d30b5ae2fa8b3894d53d9b66f3512e","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/telangana/terrain.json":{"size":46284,"sha256":"9ec9cc74ffa334ed98f26a093f9e5c0183459fa2fa9ed4263502e8a48431eed7","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/tripura/satellite.jpg":{"size":151229,"sha256":"6dee2435466ccabf3a62aa4122f2f936c38c3ba965d3803a2433407e0f086609","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/tripura/terrain.json":{"size":46281,"sha256":"e6f8a7d459bc40f9b92064f9ba4f95b13ab3077bec4dac4da64a2a750953c09e","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/uttar-pradesh/satellite.jpg":{"size":168132,"sha256":"bc89481e6426ce0aa40b357d3a9e4cd4be50177cb888c7a4583447dd76fbab55","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/uttar-pradesh/terrain.json":{"size":46284,"sha256":"83491a781804d539973ec739d7b41bf7420e765bf3e132247f20b3c42477869e","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/uttarakhand/satellite.jpg":{"size":161472,"sha256":"e3c2583725ca23d0570ee12310571f06c1fff7c31db2437b5bb53a06c30034ea","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/uttarakhand/terrain.json":{"size":52857,"sha256":"161cc0c42bf4dcadb318ba4d2a7e0b70c2c10f2694a32cd432ca3f76142c37b3","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/west-bengal/satellite.jpg":{"size":135161,"sha256":"32cc5b77a9dec9355fedcca4f37ec6992006c776ec9d1e9fc48c0e0802256cf1","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions/west-bengal/terrain.json":{"size":33555,"sha256":"e1a33a341cedc9d81fbfb1efeb195ae7d9d1305687ccef11c35a20ee02483ad2","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/regions.json":{"size":16702,"sha256":"059236a2861574949a295ce88ddfc6e1dcf5023539234ef93a234c4a6c904d0a","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/satellite.jpg":{"size":303754,"sha256":"1b9b321555ecfbf26f49788ec114bb1f3d8024acbb6bf233f2eca543ea5e5999","type":"image/jpeg","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/terrain.json":{"size":46257,"sha256":"b0e616bc9eb567c847895cd791231d826aca3c83489fee87a784dafc9e150f76","type":"application/json; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"assets/watershed-gadakwadi.geojson":{"size":39494,"sha256":"3a057af5e4a7b769e4462c4006177ecfef8f9c6270d2eb25052299815cfe7ec4","type":"application/octet-stream"},"index.html":{"size":10683,"sha256":"e7c144e750126ad38a9f9c7668a23e026f2180888cfa327ae0afa2b0e5eb0855","type":"text/html; charset=utf-8"},"output-panel.css":{"size":2167,"sha256":"31485cd90a0b20017f150ce1ed2b5f49850b69806e7d6fe475494ffd9be04329","type":"text/css; charset=utf-8"},"output-panel.js":{"size":8959,"sha256":"4c74a6ea7f48914935baf0cc724297351ef2a1192f1c3e8866258568db5e24e6","type":"text/javascript; charset=utf-8"},"software-renderer.js":{"size":3638,"sha256":"c1a266e9d25160e97db8abc042e7e4eeeea71a0ab3038b75652517406ef69fe6","type":"text/javascript; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"stl-export.js":{"size":12036,"sha256":"e97b78d3e3e80fff28756b0eb40c7e86fd7f1eb2b0133a6d6bdc75d358b60ca6","type":"text/javascript; charset=utf-8"},"style.css":{"size":24465,"sha256":"5b4d9af56ddb8b163aeb26b61f3596afa42b471e5766f22086fd6e766fe6416c","type":"text/css; charset=utf-8"},"terrain-atlas.js":{"size":7965,"sha256":"f4f01516611a6859d7ec4b522a269ba070e017f30a2e798280218860a6a452a6","type":"text/javascript; charset=utf-8"},"vendor/FFLATE-LICENSE.txt":{"size":1069,"sha256":"805f6cb28bb8b6d3a0badd83c93bccd9671fa01a3b4b92b7042b0743325ac243","type":"text/plain; charset=utf-8"},"vendor/OrbitControls.js":{"size":32134,"sha256":"80efaadea4f8a636a65fb0bd08bfef62f3d93a0bb94e2e7500f23176c5c07f4e","type":"text/javascript; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"vendor/THREE-LICENSE.txt":{"size":1081,"sha256":"4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454","type":"text/plain; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"vendor/TextureUtils.js":{"size":2420,"sha256":"d9a427b2255891ac9f2bfa9c10e1eb2305abe79aaafb831583fc4a410307151c","type":"text/javascript; charset=utf-8"},"vendor/USDZExporter.js":{"size":19049,"sha256":"b8d4e58166bf6257d0186b59d3ac52e9a078457edcf44df38230ed9785ece1e5","type":"text/javascript; charset=utf-8"},"vendor/fflate.module.js":{"size":89384,"sha256":"209a4412eb48ce609edb4391992a792ffcc3983d30ee7e2b0b89a8c470f3cd8a","type":"text/javascript; charset=utf-8"},"vendor/lerc/LICENSE":{"size":9198,"sha256":"77a8b761727c75e2167b15bfdf61b2c0bcf8792271228bebe80779106ad00671","type":"application/octet-stream"},"vendor/lerc/LercDecode.es.js":{"size":31437,"sha256":"0711f05e5f7339749d75457c4645996c94370af25da8883feb3968bc4a9911d8","type":"text/javascript; charset=utf-8"},"vendor/lerc/README.md":{"size":4911,"sha256":"26f2de9ac60d39c066bd12ddd33d810955fdf598dd302118460de2b4a8f13a6f","type":"application/octet-stream"},"vendor/lerc/lerc-wasm.wasm":{"size":117561,"sha256":"e2781a6c4e8b89ecc6820ade151a5baeb66de64956f73055c69f58aee6da689d","type":"application/wasm"},"vendor/qrcode.js":{"size":56694,"sha256":"18ae399f81182bc9de916e9c77b195df20cc58d6f2d55a62b085a299f1bf1780","type":"text/javascript; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"vendor/three.module.js":{"size":1304820,"sha256":"0a3368c165eea773490aec7b77c22de70e3eac288503409256fdbf4d12578416","type":"text/javascript; charset=utf-8","release":"afcc6ad24b2adbeaa47c4c2aee157cff1421642e"},"video-export.js":{"size":9503,"sha256":"b52c2c391c1ea6673eeea65f74551716044aea07ea8f874e94659b93bfaff5bd","type":"text/javascript; charset=utf-8"},"watershed-sources.js":{"size":8875,"sha256":"6a51ae3e9cad29546048ea20fe9d644b33778ce82f3abac318a81000ad003ea0","type":"text/javascript; charset=utf-8"}};
+export const RELEASE = 'c6391673b5e2a647135a5af1ce65316c67dc2970';
+const MAX_FILE = 8 * 1024 * 1024;
+const MAX_CACHE = 32 * 1024 * 1024;
+export const assetKey = path => `releases/${MANIFEST[path].release || RELEASE}/${path}`;
+const common = { 'X-Content-Type-Options': 'nosniff', 'Cache-Control': 'private, no-store', 'X-Robots-Tag': 'noindex, nofollow', 'Referrer-Policy': 'same-origin' };
+const hash = value => createHash('sha256').update(value).digest();
+const equal = (a, b) => typeof a === 'string' && typeof b === 'string' && timingSafeEqual(hash(a), hash(b));
+const reply = (text, status = 200, headers = {}) => new Response(text, { status, headers: { ...common, 'Content-Type': 'text/plain; charset=utf-8', ...headers } });
+
+export function safePath(encoded) {
+  let path;
+  try { path = decodeURIComponent(encoded); } catch { return null; }
+  if (!path || path.length > 240 || /[%\\\x00-\x1f\x7f]/.test(path)) return null;
+  if (path.split('/').some(part => !part || part === '.' || part === '..')) return null;
+  return Object.hasOwn(MANIFEST, path) ? path : null;
+}
+
+function authenticated(request, password) {
+  if (!password || password.length < 20) return false;
+  const auth = request.headers.get('Authorization') || '';
+  if (!auth.startsWith('Basic ') || auth.length > 2048) return false;
+  let decoded;
+  try { decoded = atob(auth.slice(6)); } catch { return false; }
+  return equal(decoded, `patamu:${password}`);
+}
+
+async function boundedBody(request) {
+  const declared = request.headers.get('Content-Length');
+  if (declared && (!/^\d+$/.test(declared) || Number(declared) > MAX_FILE)) throw new Error('TOO_LARGE');
+  if (!request.body) return new Uint8Array();
+  const reader = request.body.getReader();
+  const chunks = [];
+  let size = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    size += value.byteLength;
+    if (size > MAX_FILE) { await reader.cancel(); throw new Error('TOO_LARGE'); }
+    chunks.push(value);
+  }
+  const result = new Uint8Array(size);
+  let offset = 0;
+  for (const chunk of chunks) { result.set(chunk, offset); offset += chunk.byteLength; }
+  return result;
+}
+
+export function makeHandler(env, storage) {
+  const cache = new Map();
+  const pending = new Map();
+  let cacheBytes = 0;
+  function drop(path) {
+    if (cache.has(path)) { cacheBytes -= cache.get(path).byteLength; cache.delete(path); }
+  }
+  function remember(path, bytes) {
+    drop(path);
+    while (cacheBytes + bytes.byteLength > MAX_CACHE && cache.size) drop(cache.keys().next().value);
+    if (bytes.byteLength <= MAX_CACHE) { cache.set(path, bytes); cacheBytes += bytes.byteLength; }
+  }
+  async function load(path, spec) {
+    if (cache.has(path)) { const bytes = cache.get(path); cache.delete(path); cache.set(path, bytes); return bytes; }
+    if (pending.has(path)) return pending.get(path);
+    const operation = (async () => {
+      const bytes = new Uint8Array(await storage.file(assetKey(path)).arrayBuffer());
+      if (bytes.byteLength !== spec.size || hash(bytes).toString('hex') !== spec.sha256) throw new Error('ASSET_INTEGRITY');
+      remember(path, bytes);
+      return bytes;
+    })();
+    pending.set(path, operation);
+    try { return await operation; } finally { pending.delete(path); }
+  }
+  return async request => {
+    try {
+      const pathname = new URL(request.url).pathname;
+      if (pathname === '/healthz' && (request.method === 'GET' || request.method === 'HEAD')) return reply(request.method === 'HEAD' ? null : 'ok');
+      if (pathname.startsWith('/__deploy/')) {
+        if (env.DEPLOY_UPLOAD_ENABLED !== 'true') return reply('Not found', 404);
+        if (request.method !== 'PUT') return reply('Method not allowed', 405, { Allow: 'PUT' });
+        if (!env.DEPLOY_TOKEN || env.DEPLOY_TOKEN.length < 24 || !equal(request.headers.get('Authorization'), `Bearer ${env.DEPLOY_TOKEN}`)) return reply('Unauthorized', 401);
+        const path = safePath(pathname.slice('/__deploy/'.length));
+        if (!path) return reply('Invalid asset path', 400);
+        if (!storage) return reply('Service not configured', 503);
+        const bytes = await boundedBody(request);
+        const spec = MANIFEST[path];
+        if (bytes.byteLength !== spec.size || hash(bytes).toString('hex') !== spec.sha256) return reply('Asset does not match release manifest', 422);
+        await storage.file(assetKey(path)).write(bytes, { type: spec.type });
+        remember(path, bytes);
+        return reply('Stored', 201);
+      }
+      if (!env.ACCESS_PASSWORD || env.ACCESS_PASSWORD.length < 20) return reply('Service not configured', 503);
+      if (!authenticated(request, env.ACCESS_PASSWORD)) return reply('Authentication required', 401, { 'WWW-Authenticate': 'Basic realm="Patamu private", charset="UTF-8"' });
+      if (request.method !== 'GET' && request.method !== 'HEAD') return reply('Method not allowed', 405, { Allow: 'GET, HEAD' });
+      const path = safePath(pathname === '/' ? 'index.html' : pathname.slice(1));
+      if (!path) return reply('Not found', 404);
+      if (!storage) return reply('Service not configured', 503);
+      const spec = MANIFEST[path];
+      const bytes = await load(path, spec);
+      return new Response(request.method === 'HEAD' ? null : bytes, { headers: { ...common, 'Content-Type': spec.type, 'Content-Length': String(spec.size), ETag: `"${spec.sha256}"` } });
+    } catch (error) {
+      if (error?.message === 'TOO_LARGE') return reply('Payload too large', 413);
+      // Do not expose object keys, credentials, request headers or provider diagnostics.
+      console.error('Patamu asset request failed', error?.message === 'ASSET_INTEGRITY' ? 'integrity' : 'storage-or-request');
+      return reply('Asset temporarily unavailable', 503);
+    }
+  };
+}
+
+if (typeof Bun !== 'undefined') {
+  const env = Bun.env;
+  const configured = ['S3_ENDPOINT','S3_BUCKET','S3_REGION','S3_ACCESS_KEY_ID','S3_SECRET_ACCESS_KEY'].every(key => env[key]);
+  let storage = null;
+  if (configured) {
+    const endpoint = new URL(env.S3_ENDPOINT);
+    // Bun expects the bucket-qualified endpoint with virtualHostedStyle=true.
+    if (!endpoint.hostname.startsWith(`${env.S3_BUCKET}.`)) endpoint.hostname = `${env.S3_BUCKET}.${endpoint.hostname}`;
+    storage = new Bun.S3Client({ endpoint: endpoint.origin, region: env.S3_REGION, accessKeyId: env.S3_ACCESS_KEY_ID, secretAccessKey: env.S3_SECRET_ACCESS_KEY, virtualHostedStyle: true });
+  }
+  Bun.serve({ hostname: '0.0.0.0', port: Number(env.PORT || 3000), maxRequestBodySize: MAX_FILE, fetch: makeHandler(env, storage) });
+}
