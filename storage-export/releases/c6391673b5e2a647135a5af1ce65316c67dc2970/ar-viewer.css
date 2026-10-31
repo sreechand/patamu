@@ -1,0 +1,41 @@
+.patamu-ar-dialog{width:min(560px,calc(100vw - 28px));max-height:calc(100dvh - 28px);padding:0;background:#f8f7ef;color:#163d3b;border:1px solid #b7c5b7;border-radius:18px;overflow:auto;box-shadow:0 24px 100px #061e2699;font-family:inherit}
+.patamu-ar-dialog::backdrop{background:#081f24b8;backdrop-filter:blur(5px)}
+.patamu-ar-dialog *{box-sizing:border-box}
+.patamu-ar-header{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:20px 22px;border-bottom:1px solid #d5ddd0;background:#f8f7ef;position:sticky;top:0;z-index:5}
+.patamu-ar-header h2{font-size:23px;line-height:1.2;margin:5px 0 0;color:#173e3b}
+.patamu-ar-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;color:#5a7468}
+.patamu-ar-header .patamu-ar-action{width:auto;white-space:nowrap;padding:8px 13px;min-height:44px;font-size:14px}
+.patamu-ar-chooser{padding:0 22px 12px}
+.patamu-ar-intro{font-size:17px;line-height:1.5;margin:20px 0 10px}
+.patamu-ar-provenance{font-size:13px;line-height:1.6;background:#e9efe1;border-left:3px solid #758c56;padding:12px 14px;margin:0 0 22px}
+.patamu-ar-action{display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;font-family:inherit;font-weight:600;font-size:15px;line-height:1.35;color:#173e3b;background:#eef1e6;border:1px solid #b8c7b5;border-radius:10px;padding:13px 16px;width:100%;min-height:48px;cursor:pointer;text-align:center}
+.patamu-ar-action:disabled{cursor:default;opacity:.6}
+.patamu-ar-action:hover:not(:disabled){background:#e3ead8}
+.patamu-ar-action:focus-visible,.patamu-ar-download:focus-visible,.patamu-ar-scale input:focus-visible{outline:3px solid #219b90;outline-offset:3px}
+.patamu-ar-action.patamu-ar-primary{background:#174d47;color:#f9fff5;border-color:#174d47}
+.patamu-ar-action.patamu-ar-primary:hover:not(:disabled){background:#24635a}
+.patamu-ar-hint{font-size:13px;line-height:1.55;color:#526c60;margin:8px 0 20px}
+.patamu-ar-privacy{font-size:12px;line-height:1.55;color:#526c60;padding-top:14px;border-top:1px solid #d2dccf}
+.patamu-ar-download{display:block;font-size:14px;color:#1c6057;text-align:center;margin:12px 0 20px}
+.patamu-ar-status{padding:0 22px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#245e4f}
+.patamu-ar-status:empty{display:none}
+.patamu-ar-status.patamu-ar-error{color:#8d3829}
+.patamu-ar-dialog [hidden]{display:none!important}
+.patamu-ar-dialog.patamu-ar-active{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;margin:0;border:0;border-radius:0;background:#122a2b;overflow:hidden}
+.patamu-ar-dialog.patamu-ar-xr{background:transparent}
+.patamu-ar-dialog.patamu-ar-xr::backdrop{background:transparent;backdrop-filter:none}
+.patamu-ar-active .patamu-ar-header{position:absolute;top:0;left:0;right:0;padding-top:max(12px,env(safe-area-inset-top));background:#f8f7eff2}
+.patamu-ar-active .patamu-ar-status{position:absolute;top:90px;left:0;right:0;background:#f8f7eff2;z-index:4;padding:8px 16px}
+.patamu-ar-stage{position:absolute;inset:0;overflow:hidden;background:transparent}
+.patamu-ar-video,.patamu-ar-canvas,.patamu-ar-canvas canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;touch-action:none}
+.patamu-ar-overlay{position:absolute;bottom:0;left:0;right:0;z-index:3;padding:14px max(16px,env(safe-area-inset-left)) max(18px,env(safe-area-inset-bottom));background:linear-gradient(transparent,#102e30ed 25%);color:#fff;font-size:14px;pointer-events:none}
+.patamu-ar-camera-notice{font-weight:600;font-size:14px;line-height:1.5;margin:28px 0 8px;text-shadow:0 1px 5px #000}
+.patamu-ar-camera-provenance{font-size:12px;line-height:1.45;margin:0 0 12px;text-shadow:0 1px 5px #000;color:#e6eddc}
+.patamu-ar-session-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;pointer-events:auto}
+.patamu-ar-session-actions .patamu-ar-action{min-height:44px;font-size:14px;padding:10px 12px;background:#f3f6ea}
+.patamu-ar-session-actions .patamu-ar-primary{background:#b7e4c0;color:#173e3b;border-color:#b7e4c0}
+.patamu-ar-scale{display:flex;align-items:center;gap:12px;pointer-events:auto;margin-top:14px;font-size:13px}
+.patamu-ar-scale span{white-space:nowrap}
+.patamu-ar-scale input{width:100%;height:32px;accent-color:#b7e4c0}
+@media(min-width:761px){.patamu-ar-overlay{max-width:580px;margin:0 auto;border-radius:16px 16px 0 0}}
+@media(max-width:360px){.patamu-ar-header{padding:15px}.patamu-ar-header h2{font-size:20px}.patamu-ar-chooser{padding:0 15px 10px}.patamu-ar-action{font-size:14px}.patamu-ar-intro{font-size:16px}}

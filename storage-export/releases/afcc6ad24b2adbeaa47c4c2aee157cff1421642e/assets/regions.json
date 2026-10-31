@@ -1,0 +1,618 @@
+[
+  {
+    "id": "andhra-pradesh",
+    "state": "Andhra Pradesh",
+    "name": "Gandikota",
+    "district": "YSR Kadapa",
+    "center": [
+      14.8153,
+      78.282
+    ],
+    "bounds": [
+      14.8403,
+      78.257,
+      14.7903,
+      78.307
+    ],
+    "terrain": "River gorge",
+    "reference": "sedimentary",
+    "description": "A rural Pennar gorge cut into the rocky plateau.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=14.8153&mlon=78.282#map=13/14.8153/78.282",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "arunachal-pradesh",
+    "state": "Arunachal Pradesh",
+    "name": "Sangti valley",
+    "district": "West Kameng",
+    "center": [
+      27.4225,
+      92.285
+    ],
+    "bounds": [
+      27.4475,
+      92.26,
+      27.3975,
+      92.31
+    ],
+    "terrain": "Himalayan river valley",
+    "reference": "hardrock",
+    "description": "A cultivated river valley surrounded by steep Himalayan slopes.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=27.4225&mlon=92.285#map=13/27.4225/92.285",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "assam",
+    "state": "Assam",
+    "name": "Kamalabari countryside, Majuli",
+    "district": "Majuli",
+    "center": [
+      26.947,
+      94.176
+    ],
+    "bounds": [
+      26.972,
+      94.151,
+      26.922,
+      94.201
+    ],
+    "terrain": "River island & floodplain",
+    "reference": "alluvial",
+    "description": "Rural river-island terrain shaped by channels of the Brahmaputra.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=26.947&mlon=94.176#map=13/26.947/94.176",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "bihar",
+    "state": "Bihar",
+    "name": "Valmikinagar countryside",
+    "district": "West Champaran",
+    "center": [
+      27.433,
+      83.918
+    ],
+    "bounds": [
+      27.458,
+      83.893,
+      27.408,
+      83.943
+    ],
+    "terrain": "Terai & foothills",
+    "reference": "alluvial",
+    "description": "The Gandak river plain meets the forested Himalayan foothills.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=27.433&mlon=83.918#map=13/27.433/83.918",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "chhattisgarh",
+    "state": "Chhattisgarh",
+    "name": "Chitrakote",
+    "district": "Bastar",
+    "center": [
+      19.207,
+      81.701
+    ],
+    "bounds": [
+      19.232,
+      81.676,
+      19.182,
+      81.726
+    ],
+    "terrain": "Dissected plateau",
+    "reference": "sedimentary",
+    "description": "The Indravati river crosses the Bastar plateau and its escarpment.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=19.207&mlon=81.701#map=13/19.207/81.701",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "goa",
+    "state": "Goa",
+    "name": "Loliem",
+    "district": "South Goa",
+    "center": [
+      14.982,
+      74.071
+    ],
+    "bounds": [
+      15.007,
+      74.046,
+      14.957,
+      74.096
+    ],
+    "terrain": "Coastal hills",
+    "reference": "coastal",
+    "description": "Rolling rural coastal hills and low valleys near the Arabian Sea.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=14.982&mlon=74.071#map=13/14.982/74.071",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "gujarat",
+    "state": "Gujarat",
+    "name": "Dhordo",
+    "district": "Kachchh",
+    "center": [
+      23.822,
+      69.522
+    ],
+    "bounds": [
+      23.847,
+      69.497,
+      23.797,
+      69.547
+    ],
+    "terrain": "Salt desert",
+    "reference": "arid",
+    "description": "The edge of the seasonally inundated salt flats of the Great Rann.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=23.822&mlon=69.522#map=13/23.822/69.522",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "haryana",
+    "state": "Haryana",
+    "name": "Rakhigarhi",
+    "district": "Hisar",
+    "center": [
+      29.289,
+      76.11
+    ],
+    "bounds": [
+      29.314,
+      76.085,
+      29.264,
+      76.135
+    ],
+    "terrain": "Agricultural plain",
+    "reference": "alluvial",
+    "description": "Low-relief village farmland on the north Indian plain.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=29.289&mlon=76.11#map=13/29.289/76.11",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "himachal-pradesh",
+    "state": "Himachal Pradesh",
+    "name": "Langza",
+    "district": "Lahaul and Spiti",
+    "center": [
+      32.279,
+      78.091
+    ],
+    "bounds": [
+      32.304,
+      78.066,
+      32.254,
+      78.116
+    ],
+    "terrain": "High-altitude cold desert",
+    "reference": "sedimentary",
+    "description": "An exposed Spiti village landscape with steep, sparsely vegetated slopes.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=32.279&mlon=78.091#map=13/32.279/78.091",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "jharkhand",
+    "state": "Jharkhand",
+    "name": "Netarhat countryside",
+    "district": "Latehar",
+    "center": [
+      23.473,
+      84.267
+    ],
+    "bounds": [
+      23.498,
+      84.242,
+      23.448,
+      84.292
+    ],
+    "terrain": "Forested plateau",
+    "reference": "hardrock",
+    "description": "A wooded plateau edge in the Chota Nagpur uplands.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=23.473&mlon=84.267#map=13/23.473/84.267",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "karnataka",
+    "state": "Karnataka",
+    "name": "Anegundi",
+    "district": "Koppal",
+    "center": [
+      15.352,
+      76.492
+    ],
+    "bounds": [
+      15.377,
+      76.467,
+      15.327,
+      76.517
+    ],
+    "terrain": "Granite boulder landscape",
+    "reference": "hardrock",
+    "description": "Rocky hillocks, cultivated pockets and the Tungabhadra river near Anegundi.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=15.352&mlon=76.492#map=13/15.352/76.492",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "kerala",
+    "state": "Kerala",
+    "name": "Kainakary",
+    "district": "Alappuzha",
+    "center": [
+      9.503,
+      76.383
+    ],
+    "bounds": [
+      9.528,
+      76.358,
+      9.478,
+      76.408
+    ],
+    "terrain": "Backwaters & lowland wetlands",
+    "reference": "coastal",
+    "description": "A low-lying Kuttanad landscape of waterways and paddy fields.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=9.503&mlon=76.383#map=13/9.503/76.383",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "madhya-pradesh",
+    "state": "Madhya Pradesh",
+    "name": "Tamia countryside",
+    "district": "Chhindwara",
+    "center": [
+      22.342,
+      78.66
+    ],
+    "bounds": [
+      22.367,
+      78.635,
+      22.317,
+      78.685
+    ],
+    "terrain": "Forested escarpment",
+    "reference": "sedimentary",
+    "description": "Rural Satpura hills and the edges of the Patalkot landscape.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=22.342&mlon=78.66#map=13/22.342/78.66",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "maharashtra",
+    "state": "Maharashtra",
+    "name": "Gadakwadi",
+    "district": "Pune",
+    "center": [
+      18.873,
+      74.03
+    ],
+    "bounds": [
+      18.896,
+      74.01,
+      18.85,
+      74.05
+    ],
+    "terrain": "Basalt plateau",
+    "reference": "basalt",
+    "description": "The supplied field example: a plateau watershed with three mapped aquifer systems.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=18.873&mlon=74.03#map=13/18.873/74.03",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": true
+  },
+  {
+    "id": "manipur",
+    "state": "Manipur",
+    "name": "Andro",
+    "district": "Imphal East",
+    "center": [
+      24.75,
+      94.044
+    ],
+    "bounds": [
+      24.775,
+      94.019,
+      24.725,
+      94.069
+    ],
+    "terrain": "Valley–hill transition",
+    "reference": "alluvial",
+    "description": "Village farmland at the eastern edge of the Imphal valley.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=24.75&mlon=94.044#map=13/24.75/94.044",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "meghalaya",
+    "state": "Meghalaya",
+    "name": "Mawlynnong",
+    "district": "East Khasi Hills",
+    "center": [
+      25.201,
+      91.916
+    ],
+    "bounds": [
+      25.226,
+      91.891,
+      25.176,
+      91.941
+    ],
+    "terrain": "Humid limestone hills",
+    "reference": "limestone",
+    "description": "Wet, deeply dissected southern Khasi hill country.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=25.201&mlon=91.916#map=13/25.201/91.916",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "mizoram",
+    "state": "Mizoram",
+    "name": "Reiek",
+    "district": "Mamit",
+    "center": [
+      23.684,
+      92.603
+    ],
+    "bounds": [
+      23.709,
+      92.578,
+      23.659,
+      92.628
+    ],
+    "terrain": "Folded hill ridges",
+    "reference": "sedimentary",
+    "description": "Narrow ridges and steep forested valleys in rural Mizoram.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=23.684&mlon=92.603#map=13/23.684/92.603",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "nagaland",
+    "state": "Nagaland",
+    "name": "Khonoma",
+    "district": "Kohima",
+    "center": [
+      25.65,
+      94.022
+    ],
+    "bounds": [
+      25.675,
+      93.997,
+      25.625,
+      94.047
+    ],
+    "terrain": "Terraced mountain slopes",
+    "reference": "sedimentary",
+    "description": "Cultivated terraces and wooded ridges around the village.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=25.65&mlon=94.022#map=13/25.65/94.022",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "odisha",
+    "state": "Odisha",
+    "name": "Satapada",
+    "district": "Puri",
+    "center": [
+      19.679,
+      85.44
+    ],
+    "bounds": [
+      19.704,
+      85.415,
+      19.654,
+      85.465
+    ],
+    "terrain": "Coastal lagoon",
+    "reference": "coastal",
+    "description": "A village landscape on the margins of Chilika lagoon.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=19.679&mlon=85.44#map=13/19.679/85.44",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "punjab",
+    "state": "Punjab",
+    "name": "Kila Raipur",
+    "district": "Ludhiana",
+    "center": [
+      30.657,
+      75.837
+    ],
+    "bounds": [
+      30.682,
+      75.812,
+      30.632,
+      75.862
+    ],
+    "terrain": "Irrigated alluvial plain",
+    "reference": "alluvial",
+    "description": "Rural fields and settlements on the low-relief Punjab plain.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=30.657&mlon=75.837#map=13/30.657/75.837",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "rajasthan",
+    "state": "Rajasthan",
+    "name": "Khuri, Jaisalmer",
+    "district": "Jaisalmer",
+    "center": [
+      26.581,
+      70.729
+    ],
+    "bounds": [
+      26.606,
+      70.704,
+      26.556,
+      70.754
+    ],
+    "terrain": "Sand dunes",
+    "reference": "arid",
+    "description": "A rural Thar landscape of wind-shaped dunes and sparse vegetation.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=26.581&mlon=70.729#map=13/26.581/70.729",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "sikkim",
+    "state": "Sikkim",
+    "name": "Thangu valley",
+    "district": "Mangan",
+    "center": [
+      27.891,
+      88.534
+    ],
+    "bounds": [
+      27.916,
+      88.509,
+      27.866,
+      88.559
+    ],
+    "terrain": "High alpine valley",
+    "reference": "hardrock",
+    "description": "A high Himalayan valley with steep mountain walls around a rural hamlet.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=27.891&mlon=88.534#map=13/27.891/88.534",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "tamil-nadu",
+    "state": "Tamil Nadu",
+    "name": "Poompuhar countryside",
+    "district": "Mayiladuthurai",
+    "center": [
+      11.14,
+      79.85
+    ],
+    "bounds": [
+      11.165,
+      79.825,
+      11.115,
+      79.875
+    ],
+    "terrain": "Delta & sandy coast",
+    "reference": "coastal",
+    "description": "Village farmland at the Cauvery delta’s meeting with the Bay of Bengal.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=11.14&mlon=79.85#map=13/11.14/79.85",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "telangana",
+    "state": "Telangana",
+    "name": "Laknavaram countryside",
+    "district": "Mulugu",
+    "center": [
+      18.151,
+      80.04
+    ],
+    "bounds": [
+      18.176,
+      80.015,
+      18.126,
+      80.065
+    ],
+    "terrain": "Rocky plateau & reservoir",
+    "reference": "hardrock",
+    "description": "Rural hillocks, woodland and a reservoir in the Deccan interior.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=18.151&mlon=80.04#map=13/18.151/80.04",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "tripura",
+    "state": "Tripura",
+    "name": "Vanghmun, Jampui Hills",
+    "district": "North Tripura",
+    "center": [
+      24.009,
+      92.278
+    ],
+    "bounds": [
+      24.034,
+      92.253,
+      23.984,
+      92.303
+    ],
+    "terrain": "Humid hill range",
+    "reference": "sedimentary",
+    "description": "A rural ridge landscape in the Jampui Hills.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=24.009&mlon=92.278#map=13/24.009/92.278",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "uttar-pradesh",
+    "state": "Uttar Pradesh",
+    "name": "Bateshwar countryside",
+    "district": "Agra",
+    "center": [
+      26.939,
+      78.546
+    ],
+    "bounds": [
+      26.964,
+      78.521,
+      26.914,
+      78.571
+    ],
+    "terrain": "River ravines",
+    "reference": "alluvial",
+    "description": "Rural Yamuna banks with incised channels and ravine terrain.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=26.939&mlon=78.546#map=13/26.939/78.546",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "uttarakhand",
+    "state": "Uttarakhand",
+    "name": "Sari",
+    "district": "Rudraprayag",
+    "center": [
+      30.5168834,
+      79.1352613
+    ],
+    "bounds": [
+      30.541883,
+      79.110261,
+      30.491883,
+      79.160261
+    ],
+    "terrain": "Terraced Himalayan slopes",
+    "reference": "hardrock",
+    "description": "A mountain village with cultivated slopes and forested ridges.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=30.5168834&mlon=79.1352613#map=13/30.5168834/79.1352613",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  },
+  {
+    "id": "west-bengal",
+    "state": "West Bengal",
+    "name": "Dayapur, Sundarbans",
+    "district": "South 24 Parganas",
+    "center": [
+      22.1308448,
+      88.8552973
+    ],
+    "bounds": [
+      22.155845,
+      88.830297,
+      22.105845,
+      88.880297
+    ],
+    "terrain": "Tidal delta & mangroves",
+    "reference": "coastal",
+    "description": "Low delta islands, tidal channels and mangrove margins.",
+    "locationSource": "https://www.openstreetmap.org/?mlat=22.1308448&mlon=88.8552973#map=13/22.1308448/88.8552973",
+    "elevationSource": "https://registry.opendata.aws/terrain-tiles/",
+    "localEvidence": false
+  }
+]
